@@ -1,0 +1,4 @@
+<repast.simphony.userpanel.ui.DefaultUserPanelDescriptor>
+  <name>Custom Panel</name>
+  <userPanelCreator>mas_a3.factories.ReLogoPanelCreator</userPanelCreator>
+</repast.simphony.userpanel.ui.DefaultUserPanelDescriptor>
