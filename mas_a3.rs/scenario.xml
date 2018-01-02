@@ -2,6 +2,6 @@
 <Scenario>
 <repast.simphony.dataLoader.engine.ClassNameDataLoaderAction context="mas_a3" file="repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_0.xml" />
 <repast.simphony.userpanel.ui.DefaultUserPanelDescriptorAction context="mas_a3" file="repast.simphony.userpanel.ui.DefaultUserPanelDescriptorAction_1.xml" />
-<repast.simphony.action.display context="default_observer_context" file="repast.simphony.action.display_relogoDefault.xml" />
+<repast.simphony.action.display context="default_observer_context" file="repast.simphony.action.display_2.xml" />
 <model.initializer class="repast.simphony.relogo.ReLogoInitializer" />
 </Scenario>

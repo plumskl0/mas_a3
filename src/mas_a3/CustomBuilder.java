@@ -27,10 +27,14 @@ public class CustomBuilder implements ContextBuilder<Object> {
 
 		GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
 
-		Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(
-				new StrictBorders(), new SimpleGridAdder<Object>(), true, 50, 50));
+		Grid<Object> grid = gridFactory.createGrid("grid", context,
+				new GridBuilderParameters<Object>(new StrictBorders(), new SimpleGridAdder<Object>(), true, 50, 50));
 
 		// Ziele
+		Ziel ziel = new Ziel(space, grid);
+		context.add(ziel);
+		space.moveTo(ziel, (int) 10, (int) 15);
+		grid.moveTo(ziel, (int) 10, (int) 15);
 
 		// Boten
 

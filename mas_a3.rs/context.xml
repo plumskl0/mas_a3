@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <context xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="http://repast.org/scenario/context" id="mas_a3">
-	<context id="default_observer_context">
-		<projection type="continuous space" id="space" />
-		<projection type="grid" id="grid" />
-	</context>
+	<projection type="continuous space" id="space" />
+	<projection type="grid" id="grid" />
 </context>
