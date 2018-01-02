@@ -1,5 +1,5 @@
 <repast.simphony.visualization.engine.CartesianDisplayDescriptor>
-  <name>MyDisp</name>
+  <name>myDisp</name>
   <type>2D</type>
   <styles>
     <entry>
@@ -10,7 +10,7 @@
   <editedStyles>
     <entry>
       <string>mas_a3.Ziel</string>
-      <string>mas_a3.Ziel.style_1.xml</string>
+      <string>mas_a3.Ziel.style_2.xml</string>
     </entry>
   </editedStyles>
   <netStyles/>
@@ -23,7 +23,7 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>-766556771</hashCode>
+    <hashCode>-832134915</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>space</layoutProjection>
