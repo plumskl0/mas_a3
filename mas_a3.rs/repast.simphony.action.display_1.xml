@@ -1,16 +1,24 @@
 <repast.simphony.visualization.engine.CartesianDisplayDescriptor>
-  <name>myDisp</name>
+  <name>MyDisp</name>
   <type>2D</type>
   <styles>
     <entry>
       <string>mas_a3.Ziel</string>
       <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
     </entry>
+    <entry>
+      <string>mas_a3.Bote</string>
+      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
+    </entry>
   </styles>
   <editedStyles>
     <entry>
       <string>mas_a3.Ziel</string>
-      <string>mas_a3.Ziel.style_2.xml</string>
+      <string>mas_a3.Ziel.style_4.xml</string>
+    </entry>
+    <entry>
+      <string>mas_a3.Bote</string>
+      <string>mas_a3.Bote.style_3.xml</string>
     </entry>
   </editedStyles>
   <netStyles/>
@@ -23,7 +31,7 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>-832134915</hashCode>
+    <hashCode>-603882868</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>space</layoutProjection>
@@ -32,6 +40,10 @@
     <entry>
       <string>mas_a3.Ziel</string>
       <int>0</int>
+    </entry>
+    <entry>
+      <string>mas_a3.Bote</string>
+      <int>1</int>
     </entry>
   </layerOrder>
   <projections>
