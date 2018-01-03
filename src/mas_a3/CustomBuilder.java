@@ -48,10 +48,11 @@ public class CustomBuilder implements ContextBuilder<Object> {
 		erzeugeZiele(context, new Ziel(space, grid, 40, 40));
 
 		// Lieferungen
-		erzeugeLieferung(2);
+		erzeugeLieferung(6);
 
 		// Verhandlung?
 		coordinator = new Koordinator(zielListe, lieferungListe);
+		context.add(coordinator);
 
 		// Boten
 		erzeugeBote(context, new Bote(space, grid, 1), 24, 25);
