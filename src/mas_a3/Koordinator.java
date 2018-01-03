@@ -25,7 +25,7 @@ public class Koordinator {
 		// Lieferanten das Ziel mitteilen.
 		// Kosten der Lieferanten vergleichen.
 		// Lieferung dem Lieferanten zuweisen.
-		
+		// evtl. noch was?
 	}
 
 	public void receiveMessage(FipaMessage m) {
