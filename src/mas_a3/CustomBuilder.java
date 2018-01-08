@@ -49,7 +49,7 @@ public class CustomBuilder implements ContextBuilder<Object> {
 		erzeugeZiele(context, new Ziel(space, grid, 10, 35));
 
 		// Lieferungen
-		erzeugeLieferung(24);
+		erzeugeLieferung(10000);
 
 		// Verhandlung?
 		coordinator = new Koordinator(zielListe, lieferungListe);

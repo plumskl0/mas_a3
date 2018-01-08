@@ -40,6 +40,7 @@ public class Koordinator {
 
 		// evtl. noch was?
 		lieferKosten.clear();
+		transporter.clear();
 	}
 
 	// Hier könnte noch ein Fehler drin sein, da zwei Boten die selbe Lieferung machen
@@ -92,6 +93,7 @@ public class Koordinator {
 				break;
 			default:
 				System.out.println("Koordi ... hmm...");
+				System.out.println("Nachricht: " + m.sender + " Performative:" + m.perfomative);
 				break;
 			}
 		}
@@ -104,6 +106,7 @@ public class Koordinator {
 			m.perfomative = Performative.agree;
 			m.sender = name;
 			m.receiver = k;
+			v.setInDelivery(true);
 			m.content = v;
 
 			boten.get(k).receiveMessage(m);

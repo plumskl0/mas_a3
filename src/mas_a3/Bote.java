@@ -17,7 +17,7 @@ public class Bote {
 
 	private Koordinator coordinator;
 
-	private boolean delivery = false;
+	private boolean delivery;
 
 	private Lieferung lieferung;
 	private Ziel ziel;
@@ -26,11 +26,12 @@ public class Bote {
 		this.space = space;
 		this.grid = grid;
 		name = "Bote_" + id;
+		setDelivery(false);
 	}
 
 	@ScheduledMethod(start = 1, interval = 1)
 	public void run() {
-		if (delivery) {
+		if (isDelivery()) {
 			GridPoint pt = grid.getLocation(ziel);
 			moveTowards(pt);
 		}
@@ -44,17 +45,17 @@ public class Bote {
 			space.moveByVector(this, 1, angle, 0);
 			myPoint = space.getLocation(this);
 			grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
-			checkArrived(pt);
 		}
+		checkArrived(pt);
 	}
 
 	private void checkArrived(GridPoint pt) {
 
 		GridPoint myPos = grid.getLocation(this);
 
-		System.out.println("Bote arrived? " + (grid.getDistance(myPos, pt) <= 1));
+//		System.out.println("Bote arrived? " + grid.getDistance(myPos, pt));
 		if (grid.getDistance(myPos, pt) <= 1) {
-			delivery = false;
+			setDelivery(false);
 			lieferung.setDelivered(true);
 		}
 	}
@@ -83,8 +84,8 @@ public class Bote {
 	}
 
 	private void setDelivery(FipaMessage m) {
-		if (!delivery) {
-			delivery = true;
+		if (!isDelivery()) {
+			setDelivery(true);
 			System.out.println("Received new delivery!");
 			lieferung = (Lieferung) m.content;
 			lieferung.setInDelivery(true);
@@ -107,7 +108,7 @@ public class Bote {
 				 * Information über vorhandene Lieferungen muss ein agree an
 				 * Koordinator schicken
 				 */
-				if (delivery) {
+				if (isDelivery()) {
 					System.out.println("I'm delivering no time for more");
 					ans.perfomative = Performative.disconfirm;
 				} else {
@@ -157,6 +158,14 @@ public class Bote {
 		}
 
 		return lk;
+	}
+
+	private boolean isDelivery() {
+		return delivery;
+	}
+
+	private void setDelivery(boolean delivery) {
+		this.delivery = delivery;
 	}
 
 	// public void verhandeln?

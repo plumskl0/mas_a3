@@ -427,3 +427,84 @@ Caused by: java.lang.NullPointerException
 	at mas_a3.Koordinator.informTransporter(Koordinator.java:124)
 	at mas_a3.Koordinator.run(Koordinator.java:33)
 	... 10 more
+FATAL [Thread-8] 2018-01-08 15:50:22,451 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (1.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at mas_a3.Koordinator$$FastClassByCGLIB$$e49f5ffc.invoke(<generated>)
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
+	... 7 more
+Caused by: java.lang.NullPointerException
+	at repast.simphony.space.grid.AbstractGrid.getDistanceSq(AbstractGrid.java:458)
+	at repast.simphony.space.grid.AbstractGrid.getDistance(AbstractGrid.java:444)
+	at mas_a3.Bote.calculateCost(Bote.java:154)
+	at mas_a3.Bote.handleInform(Bote.java:129)
+	at mas_a3.Bote.receiveMessage(Bote.java:72)
+	at mas_a3.Koordinator.lambda$3(Koordinator.java:132)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at mas_a3.Koordinator.informTransporter(Koordinator.java:124)
+	at mas_a3.Koordinator.run(Koordinator.java:33)
+	... 10 more
+FATAL [Thread-8] 2018-01-08 16:04:24,029 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (1.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at mas_a3.Koordinator$$FastClassByCGLIB$$e49f5ffc.invoke(<generated>)
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
+	... 7 more
+Caused by: java.lang.NullPointerException
+	at repast.simphony.space.grid.AbstractGrid.getDistanceSq(AbstractGrid.java:458)
+	at repast.simphony.space.grid.AbstractGrid.getDistance(AbstractGrid.java:444)
+	at mas_a3.Bote.calculateCost(Bote.java:154)
+	at mas_a3.Bote.handleInform(Bote.java:129)
+	at mas_a3.Bote.receiveMessage(Bote.java:72)
+	at mas_a3.Koordinator.lambda$3(Koordinator.java:134)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at mas_a3.Koordinator.informTransporter(Koordinator.java:126)
+	at mas_a3.Koordinator.run(Koordinator.java:33)
+	... 10 more
+FATAL [Thread-8] 2018-01-08 16:31:04,955 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (1.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at mas_a3.Koordinator$$FastClassByCGLIB$$e49f5ffc.invoke(<generated>)
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
+	... 7 more
+Caused by: java.lang.NullPointerException
+	at repast.simphony.space.grid.AbstractGrid.getDistanceSq(AbstractGrid.java:458)
+	at repast.simphony.space.grid.AbstractGrid.getDistance(AbstractGrid.java:444)
+	at mas_a3.Bote.calculateCost(Bote.java:155)
+	at mas_a3.Bote.handleInform(Bote.java:130)
+	at mas_a3.Bote.receiveMessage(Bote.java:73)
+	at mas_a3.Koordinator.lambda$3(Koordinator.java:135)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at mas_a3.Koordinator.informTransporter(Koordinator.java:127)
+	at mas_a3.Koordinator.run(Koordinator.java:33)
+	... 10 more
