@@ -87,6 +87,7 @@ public class Bote {
 			delivery = true;
 			System.out.println("Received new delivery!");
 			lieferung = (Lieferung) m.content;
+			lieferung.setInDelivery(true);
 			ziel = lieferung.getZiel();
 		} else {
 			System.out.println("---- Nah");

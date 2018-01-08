@@ -125,7 +125,7 @@ public class Koordinator {
 				FipaMessage m = new FipaMessage();
 				m.perfomative = Performative.inform;
 				m.conversationId++;
-				m.content = lieferungen.stream().filter(l -> !l.isDelivered()).toArray();
+				m.content = lieferungen.stream().filter(l -> !l.isDelivered() && !l.isInDelivery()).toArray();
 				m.sender = name;
 				m.receiver = n;
 
@@ -136,7 +136,7 @@ public class Koordinator {
 
 	private void informBote() {
 		// Prüft ob es Lieferungen gibt die noch geliefert werden müssen
-		int cntLieferungen = (int) lieferungen.stream().filter(l -> !l.isDelivered()).count();
+		int cntLieferungen = (int) lieferungen.stream().filter(l -> !l.isDelivered() && !l.isInDelivery()).count();
 		System.out.println("non delivered packages = " + cntLieferungen);
 		if (cntLieferungen > 0) {
 			// Informiert die Boten, dass Lieferugen noch vorhanden sind

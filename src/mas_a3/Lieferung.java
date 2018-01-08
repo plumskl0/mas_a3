@@ -4,6 +4,7 @@ public class Lieferung {
 
 	private Ziel ziel;
 	private boolean delivered;
+	private boolean inDelivery;
 
 	public Lieferung(Ziel z) {
 		this.ziel = z;
@@ -20,6 +21,14 @@ public class Lieferung {
 
 	public Ziel getZiel() {
 		return ziel;
+	}
+
+	public boolean isInDelivery() {
+		return inDelivery;
+	}
+
+	public void setInDelivery(boolean inDelivery) {
+		this.inDelivery = inDelivery;
 	}
 
 }

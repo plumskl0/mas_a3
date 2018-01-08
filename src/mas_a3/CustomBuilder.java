@@ -26,7 +26,7 @@ public class CustomBuilder implements ContextBuilder<Object> {
 	private ArrayList<Lieferung> lieferungListe = new ArrayList<Lieferung>();
 
 	private Koordinator coordinator;
-	
+
 	@Override
 	public Context build(Context<Object> context) {
 		context.setId("mas_a3");
@@ -42,21 +42,24 @@ public class CustomBuilder implements ContextBuilder<Object> {
 				new GridBuilderParameters<Object>(new StrictBorders(), new SimpleGridAdder<Object>(), true, 50, 50));
 
 		// Ziele
-		erzeugeZiele(context, new Ziel(space, grid, 10, 10));
-		erzeugeZiele(context, new Ziel(space, grid, 10, 40));
+		erzeugeZiele(context, new Ziel(space, grid, 15, 10));
+		erzeugeZiele(context, new Ziel(space, grid, 5, 35));
 		erzeugeZiele(context, new Ziel(space, grid, 40, 10));
-		erzeugeZiele(context, new Ziel(space, grid, 40, 40));
+		erzeugeZiele(context, new Ziel(space, grid, 35, 45));
+		erzeugeZiele(context, new Ziel(space, grid, 10, 35));
 
 		// Lieferungen
-		erzeugeLieferung(6);
+		erzeugeLieferung(24);
 
 		// Verhandlung?
 		coordinator = new Koordinator(zielListe, lieferungListe);
 		context.add(coordinator);
 
 		// Boten
-		erzeugeBote(context, new Bote(space, grid, 1), 24, 25);
-		erzeugeBote(context, new Bote(space, grid, 2), 26, 25);
+		erzeugeBote(context, new Bote(space, grid, 1), 5, 5);
+		erzeugeBote(context, new Bote(space, grid, 2), 45, 5);
+		erzeugeBote(context, new Bote(space, grid, 3), 5, 25);
+		erzeugeBote(context, new Bote(space, grid, 4), 45, 45);
 
 		return context;
 	}
@@ -72,15 +75,15 @@ public class CustomBuilder implements ContextBuilder<Object> {
 		ctx.add(b);
 		space.moveTo(b, (int) x, (int) y);
 		grid.moveTo(b, (int) x, (int) y);
-		
+
 		// Bote meldet sich beim Koordinator an
 		FipaMessage m = new FipaMessage();
-		
+
 		m.perfomative = Performative.register;
 		m.sender = b.getName();
 		m.content = b;
 		m.receiver = coordinator.name;
-		
+
 		coordinator.receiveMessage(m);
 	}
 
